@@ -1,0 +1,2 @@
+Apache bench mark test
+ab -C 40 -n 500 http://localhost:8070
