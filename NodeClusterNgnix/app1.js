@@ -12,6 +12,7 @@ const getDataTime = () => {
     return `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}.${date.getMilliseconds()}`;
 };
 
+// Middle ware to serve static contents of supported mime types
 app.use(express.static(path.join(__dirname, 'images')));
 app.use('statics', express.static(path.join(__dirname, 'statics')));
 

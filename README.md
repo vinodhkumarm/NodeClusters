@@ -31,3 +31,5 @@
 	```
 	- run nginx using ```nginx -s start```
 	- if you make any config changes reload the nginx using ```nginx -s reload``` command
+
+Refer the very nice short video on nginx load balancer setup and apache bench _ https://www.youtube.com/watch?v=FJrs0Ar9asY _
