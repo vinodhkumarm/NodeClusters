@@ -1,0 +1,82 @@
+10000 - Requests
+100 - Concurrent request
+
+ab -n 10000 -c 100 http://127.0.0.1:3000/
+
+Express:-
+--------
+Server Software:
+Server Hostname:        127.0.0.1
+Server Port:            3000
+
+Document Path:          /
+Document Length:        12 bytes
+
+Concurrency Level:      100
+Time taken for tests:   5.941 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      2110000 bytes
+HTML transferred:       120000 bytes
+Requests per second:    1683.24 [#/sec] (mean)
+Time per request:       59.409 [ms] (mean)
+Time per request:       0.594 [ms] (mean, across all concurrent requests)
+Transfer rate:          346.84 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.4      0       1
+Processing:    23   59  14.7     54     126
+Waiting:        4   58  14.8     53     125
+Total:         23   59  14.7     54     126
+
+Percentage of the requests served within a certain time (ms)
+  50%     54
+  66%     59
+  75%     65
+  80%     68
+  90%     81
+  95%     92
+  98%     99
+  99%    106
+ 100%    126 (longest request)
+ 
+ 
+ 
+ Restify:- (Winnner for 1000 request)
+ --------
+Server Software:        restify
+Server Hostname:        127.0.0.1
+Server Port:            4000
+
+Document Path:          /
+Document Length:        14 bytes
+
+Concurrency Level:      100
+Time taken for tests:   5.249 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      1580000 bytes
+HTML transferred:       140000 bytes
+Requests per second:    1904.95 [#/sec] (mean)
+Time per request:       52.495 [ms] (mean)
+Time per request:       0.525 [ms] (mean, across all concurrent requests)
+Transfer rate:          293.93 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.4      0       1
+Processing:    21   52  15.5     48     111
+Waiting:        3   47  14.9     43     107
+Total:         22   52  15.5     48     111
+
+Percentage of the requests served within a certain time (ms)
+  50%     48
+  66%     52
+  75%     58
+  80%     63
+  90%     76
+  95%     85
+  98%     94
+  99%    101
+ 100%    111 (longest request)

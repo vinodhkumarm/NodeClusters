@@ -1,0 +1,82 @@
+10000 - Requests
+100 - Concurrent request
+
+ab -n 10000 -c 100 http://127.0.0.1:3000/
+
+Express:-
+--------
+Server Software:
+Server Hostname:        127.0.0.1
+Server Port:            3000
+
+Document Path:          /
+Document Length:        12 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   8.693 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      2110000 bytes
+HTML transferred:       120000 bytes
+Requests per second:    1150.39 [#/sec] (mean)
+Time per request:       869.268 [ms] (mean)
+Time per request:       0.869 [ms] (mean, across all concurrent requests)
+Transfer rate:          237.04 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1  15.8      0     501
+Processing:    88  827 238.2    867    1378
+Waiting:        2  595 272.4    702     891
+Total:         89  828 238.4    867    1378
+
+Percentage of the requests served within a certain time (ms)
+  50%    867
+  66%    872
+  75%    876
+  80%    880
+  90%    892
+  95%   1333
+  98%   1365
+  99%   1376
+ 100%   1378 (longest request)
+ 
+ 
+ 
+ Restify:- (Winnner for 1000 request)
+ --------
+Server Software:        restify
+Server Hostname:        127.0.0.1
+Server Port:            4000
+
+Document Path:          /
+Document Length:        14 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   5.007 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      1580000 bytes
+HTML transferred:       140000 bytes
+Requests per second:    1997.20 [#/sec] (mean)
+Time per request:       500.700 [ms] (mean)
+Time per request:       0.501 [ms] (mean, across all concurrent requests)
+Transfer rate:          308.16 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   8.7      0     501
+Processing:    73  468 234.2    356     878
+Waiting:        1  332 221.6    260     853
+Total:         73  468 234.3    356     878
+
+Percentage of the requests served within a certain time (ms)
+  50%    356
+  66%    372
+  75%    800
+  80%    825
+  90%    864
+  95%    868
+  98%    872
+  99%    874
+ 100%    878 (longest request)
